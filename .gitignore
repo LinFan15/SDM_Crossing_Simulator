@@ -2,4 +2,4 @@
 /packages
 /obj
 /.vs
-
+.mono/temp
