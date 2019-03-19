@@ -1,0 +1,9 @@
+/home/yannick/Documents/Projects/SDM_Crossing/simulator/godot/.mono/temp/bin/Debug/SDM Crossing.dll
+/home/yannick/Documents/Projects/SDM_Crossing/simulator/godot/.mono/temp/bin/Debug/SDM Crossing.pdb
+/home/yannick/Documents/Projects/SDM_Crossing/simulator/godot/.mono/temp/bin/Debug/MQTTnet.dll
+/home/yannick/Documents/Projects/SDM_Crossing/simulator/godot/.mono/temp/bin/Debug/MQTTnet.Extensions.ManagedClient.dll
+/home/yannick/Documents/Projects/SDM_Crossing/simulator/godot/.mono/temp/obj/Debug/SDM Crossing.csprojAssemblyReference.cache
+/home/yannick/Documents/Projects/SDM_Crossing/simulator/godot/.mono/temp/obj/Debug/SDM Crossing.csproj.CoreCompileInputs.cache
+/home/yannick/Documents/Projects/SDM_Crossing/simulator/godot/.mono/temp/obj/Debug/SDM Crossing.csproj.CopyComplete
+/home/yannick/Documents/Projects/SDM_Crossing/simulator/godot/.mono/temp/obj/Debug/SDM Crossing.dll
+/home/yannick/Documents/Projects/SDM_Crossing/simulator/godot/.mono/temp/obj/Debug/SDM Crossing.pdb

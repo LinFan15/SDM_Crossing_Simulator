@@ -1,0 +1,85 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Main.cs" type="Script" id=1]
+[ext_resource path="res://assets/crossing.jpg" type="Texture" id=2]
+[ext_resource path="res://assets/traffic-light-red.png" type="Texture" id=3]
+[ext_resource path="res://assets/traffic-light-orange.png" type="Texture" id=4]
+[ext_resource path="res://assets/traffic-light-green.png" type="Texture" id=5]
+[ext_resource path="res://Car1.cs" type="Script" id=6]
+[ext_resource path="res://assets/car-sprite.png" type="Texture" id=7]
+[ext_resource path="res://Car2.cs" type="Script" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 108.826, 3.40918 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 38.8521, 2.78522 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Crossing" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+
+[node name="Background" type="Sprite" parent="Crossing"]
+position = Vector2( 0, -0.902496 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="CrossingBoundaryVert" type="CollisionShape2D" parent="Crossing"]
+position = Vector2( 960.387, 651.475 )
+shape = SubResource( 1 )
+
+[node name="CrossingBoundaryHor" type="CollisionShape2D" parent="Crossing"]
+position = Vector2( 847.575, 539.565 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="TrafficLight1" type="AnimatedSprite" parent="."]
+position = Vector2( 1130.65, 784.467 )
+frames = SubResource( 2 )
+
+[node name="TrafficLight2" type="AnimatedSprite" parent="."]
+position = Vector2( 710.218, 708.941 )
+rotation = 1.5708
+frames = SubResource( 2 )
+
+[node name="Car1" type="KinematicBody2D" parent="."]
+position = Vector2( 1020, 760 )
+script = ExtResource( 6 )
+
+[node name="CarSprite1" type="Sprite" parent="Car1"]
+scale = Vector2( 0.361406, 0.361406 )
+texture = ExtResource( 7 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Car1/CarSprite1"]
+scale = Vector2( 11.0322, 25.2769 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car1"]
+position = Vector2( 0.773926, -89.8079 )
+shape = SubResource( 3 )
+
+[node name="Car2" type="KinematicBody2D" parent="."]
+position = Vector2( 738, 597 )
+rotation = 1.5708
+script = ExtResource( 8 )
+
+[node name="CarSprite2" type="Sprite" parent="Car2"]
+scale = Vector2( 0.361406, 0.361406 )
+texture = ExtResource( 7 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Car2/CarSprite2"]
+scale = Vector2( 10.191, 25.3993 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Car2"]
+position = Vector2( 1.54724, -90.5323 )
+shape = SubResource( 3 )
+
